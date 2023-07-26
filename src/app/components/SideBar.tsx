@@ -19,7 +19,7 @@ const sideBaricon = [
 ];
 const SideBar = () => {
   return (
-    <div className="overflow-hidden bg-white flex flex-col items-center  px-5 py-4">
+    <div className="overflow-hidden bg-white flex flex-col items-center  px-5 py-4 min-w-[100px]">
       {sideBaricon.map((icon) => (
         <div
           className="overflow-hidden bg-white flex flex-col gap-2   items-center px-5 py-[10px] hover:bg-[#E5F1FC] rounded-lg  hover:border hover:border-[#0073E6] max-w-[105px] border-transparent cursor-pointer"
@@ -34,7 +34,7 @@ const SideBar = () => {
               height={5}
             />
           </div>
-          <div className="text-xs font-medium  text-[#1c4980] ">
+          <div className="text-xs font-medium  text-[#1c4980] text-center whitespace-nowrap">
             {icon.name}
           </div>
         </div>

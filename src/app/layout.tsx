@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="container">
           <SideBar />
-          {children}
+          <div className="w-full">{children}</div>
         </div>
       </body>
     </html>

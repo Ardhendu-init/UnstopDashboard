@@ -2,18 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
-.container{
-max-width: 100%;
-  background-color: #F6F8FA;
+.container {
+  max-width: 100%;
+  background-color: #f6f8fa;
   display: flex;
-
+  gap: 10px;
 }
