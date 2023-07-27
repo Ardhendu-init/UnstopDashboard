@@ -1,20 +1,20 @@
-"use client";
-import { useState } from "react";
+import React, { useState } from "react";
 
-const AssessmentTab = () => {
-  const [activeTab, setActiveTab] = useState<Number>(1);
+const AssessmentTab: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<number>(1);
 
-  const handleTabClick = (tabNumber: Number) => {
+  const handleTabClick = (tabNumber: number) => {
     setActiveTab(tabNumber);
   };
+
   return (
-    <div className=" bg-white w-full">
+    <div className="bg-white w-full">
       <div className="flex">
         <button
-          className={`px-4 font-medium  ${
+          className={`px-4 font-medium ${
             activeTab === 1
-              ? " text-[#0073E6] font-normal border-b-2 border-[#0073E6]"
-              : "bg-white  text-[#1c4980]"
+              ? "text-[#0073E6] font-normal border-b-2 border-[#0073E6]"
+              : "bg-white text-[#1c4980]"
           }`}
           onClick={() => handleTabClick(1)}
         >
@@ -24,8 +24,8 @@ const AssessmentTab = () => {
         <button
           className={`py-4 px-4 font-medium ${
             activeTab === 2
-              ? " text-[#0073E6] font-normal border-b-2 border-[#0073E6]"
-              : " text-[#1c4980]"
+              ? "text-[#0073E6] font-normal border-b-2 border-[#0073E6]"
+              : "text-[#1c4980]"
           }`}
           onClick={() => handleTabClick(2)}
         >

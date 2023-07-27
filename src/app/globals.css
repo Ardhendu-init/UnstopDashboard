@@ -13,4 +13,19 @@
   background-color: #f6f8fa;
   display: flex;
   gap: 10px;
+  height: 100vh;
+}
+
+
+.modal-overlay {
+  z-index: -1;
+}
+
+.modal-container {
+  max-height: 80vh;
+}
+
+
+input::placeholder {
+color: #1C4980;
 }

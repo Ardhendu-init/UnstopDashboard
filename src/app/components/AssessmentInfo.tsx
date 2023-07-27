@@ -1,7 +1,8 @@
+import { AssessmentData } from "@/types";
 import Image from "next/image";
 import React from "react";
 
-const assessmentInfo = [
+const assessmentInfo: AssessmentData[] = [
   {
     id: 1,
     heading: "Total Assessment",
@@ -16,7 +17,7 @@ const assessmentInfo = [
     logoName: "Agenda",
     assignmentInfo: [
       { id: 1, number: "11,145", growth: "+89", fieldName: "Total Candidates" },
-      { id: 2, number: "114", growth: "+89", fieldName: "Who Attemped" },
+      { id: 2, number: "114", growth: "+89", fieldName: "Who Attempted" },
     ],
   },
   {
@@ -39,15 +40,15 @@ const assessmentInfo = [
   },
 ];
 
-const AssessmentInfo = () => {
+const AssessmentInfo: React.FC = () => {
   return (
-    <div className="border-[#dadce0] overflow-hidden flex xl:flex-row flex-col  gap-4  border rounded-lg my-4">
+    <div className="border-[#dadce0] overflow-hidden flex xl:flex-row flex-col gap-4 border rounded-lg my-4">
       {assessmentInfo.map((info) => (
         <div
           key={info.id}
           className={`overflow-hidden bg-white flex flex-col gap-4 justify-center py-5 pl-5 pr-10 ${
             info.id !== assessmentInfo.length &&
-            "border-[#dadce0] xl:border-r sm:border-b"
+            "border-[#dadce0] xl:border-r sm:border-b xl:border-b-0"
           }`}
         >
           <div className="text-sm font-semibold text-textDefault">
@@ -60,6 +61,7 @@ const AssessmentInfo = () => {
               alt={info.logoName}
               width={40}
               height={5}
+              style={{ height: "auto" }}
             />
             {info.assignmentInfo.map((item, index) => (
               <div key={item.id} className="flex h-full flex-grow">

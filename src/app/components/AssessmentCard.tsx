@@ -1,17 +1,6 @@
+import { AssessmentCardInfo } from "@/types";
 import Image from "next/image";
 import React from "react";
-export interface AssessmentCardProp {
-  assessmentName: string;
-  date: string;
-  duration: string;
-  question: string;
-  users: User[];
-}
-
-interface User {
-  name: string;
-  bg: string;
-}
 
 const AssessmentCard = ({
   assessmentName,
@@ -19,7 +8,7 @@ const AssessmentCard = ({
   duration,
   question,
   users,
-}: AssessmentCardProp) => {
+}: AssessmentCardInfo) => {
   return (
     <div className="border-solid border-[#dadce0] overflow-hidden bg-white flex flex-col gap-1 w-full  items-start p-4 border rounded-lg min-w-[400px]">
       <div className="flex flex-row justify-between mb-2 w-full items-center ">
