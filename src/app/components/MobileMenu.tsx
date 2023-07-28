@@ -10,7 +10,7 @@ const MobileMenu: React.FC<{ openMenu: () => void; isOpen: boolean }> = ({
     <div
       className={`overflow-hidden bg-[#f2f8fe] flex flex-col gap-1 w-[90vw] h-[100vh] z-10 absolute top-0 px-5 py-10 left-${
         isOpen ? "0" : "-100%"
-      } transition-left duration-2000`}
+      } transition-left duration-2000 slide-right`}
     >
       <div className="flex flex-row justify-between mb-3 items-center">
         <p className="text-base font-medium  text-textDefault">Menu</p>

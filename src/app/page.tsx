@@ -36,20 +36,22 @@ const Home: React.FC = () => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [openMobileMenu, SetOpenMobileMenu] = useState<boolean>(false);
   const [dashboardOpen, setDashboardOpen] = useState<boolean>(false);
-  const handleOpenModal = () => {
-    setModalOpen(true);
-  };
 
   const handleCloseModal = () => {
     setModalOpen(false);
   };
   const handleMobileMenu = () => {
-    SetOpenMobileMenu(!openMobileMenu);
+    SetOpenMobileMenu((prevOpenMobileMenu) => !prevOpenMobileMenu);
+  };
+
+  const handleOpenModal = () => {
+    setModalOpen((prevModalOpen) => !prevModalOpen);
   };
 
   const handleDashboard = () => {
-    setDashboardOpen(!dashboardOpen);
+    setDashboardOpen((prevDashboardOpen) => !prevDashboardOpen);
   };
+
   return (
     <main className="bg-white pb-10 relative">
       <div className="flex justify-between md:hidden px-4 pt-4">
@@ -93,7 +95,12 @@ const Home: React.FC = () => {
           <div className="flex items-center gap-4 sm:hidden">
             <Image src="/search.svg" width={20} height={15} alt="Search-icon" />
             <Image src="/filter.svg" width={20} height={15} alt="Filter-icon" />
-            <div onClick={handleDashboard}>
+            <div
+              onClick={handleDashboard}
+              className={`cursor-pointer w-9 h-9 ${
+                dashboardOpen && "border-[1px] border-[#0073E6]  bg-[#E5F1FC]"
+              }  flex items-center justify-center rounded-[50%]  `}
+            >
               <Image
                 src="/bar_chart.svg"
                 width={15}

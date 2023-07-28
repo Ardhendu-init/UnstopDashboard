@@ -32,22 +32,6 @@ const AssessmentTab: React.FC = () => {
           My Assessment
         </button>
       </div>
-
-      {/* <div
-        className={`${
-          activeTab === 1 ? "block" : "hidden"
-        } bg-blue-100 p-4 mt-2 rounded-bl-lg rounded-br-lg`}
-      >
-        Content for Tab 1
-      </div>
-
-      <div
-        className={`${
-          activeTab === 2 ? "block" : "hidden"
-        } bg-green-100 p-4 mt-2 rounded-bl-lg rounded-br-lg`}
-      >
-        Content for Tab 2
-      </div> */}
     </div>
   );
 };

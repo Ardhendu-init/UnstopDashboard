@@ -22,10 +22,12 @@
 }
 
 .modal-container {
-  max-height: 80vh;
+  max-height: 54vh;
 }
 
 
 input::placeholder {
 color: #1C4980;
 }
+
+

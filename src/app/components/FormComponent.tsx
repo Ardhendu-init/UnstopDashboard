@@ -29,11 +29,13 @@ const FormComponent: FunctionComponent<{ onClose: () => void }> = ({
   };
 
   return (
-    <div className="relative overflow-hidden bg-[#FFF] flex flex-col items-start justify-start text-center text-[20px] text-textDefault  font-medium text-base rounded-lg md:w-[500px]  max-h-[90vh]">
-      <div className="  w-full  overflow-hidden  flex  p-[30px] items-center justify-between  border-solid border-b">
-        <p className="relative text-xl">Create new assessment</p>
+    <div className="relative overflow-hidden bg-[#FFF] flex flex-col items-start justify-start text-center md:text-[20px] xs:text-base text-textDefault  font-medium text-base rounded-lg w-[600px] max-w-[80vw]   max-h-[90vh]">
+      <div className="  w-full  overflow-hidden  flex xs:px-2 xs:py-4 md:p-[30px] items-center justify-between  border-solid border-b">
+        <p className="relative md:text-xl xs:text-base">
+          Create new assessment
+        </p>
         <Image
-          className="relative cursor-pointer "
+          className="relative cursor-pointer xs:w-6 md:w-8"
           alt="Close-Button"
           src="/cut.svg"
           width={30}
@@ -41,7 +43,7 @@ const FormComponent: FunctionComponent<{ onClose: () => void }> = ({
           onClick={onClose}
         />
       </div>
-      <div className="overflow-hidden w-full flex flex-col py-5 px-[30px]  gap-[20px]">
+      <div className="overflow-hidden w-full flex flex-col py-5 md:px-[30px] xs:px-6   gap-[20px] overflow-y-auto">
         <div className="flex flex-col items-start gap-[10px] w-full">
           <p className="relative font-medium">Name of assessment</p>
           <input
@@ -114,11 +116,9 @@ const FormComponent: FunctionComponent<{ onClose: () => void }> = ({
           />
         </div>
       </div>
-      <div className=" shadow-[0px_-4px_50px_0px_rgba(0,_0,_0,_0.09)] overflow-hidden bg-white flex flex-col justify-center w-full px-8 py-5 ">
-        <button className="bg-[#0073e6] flex flex-col justify-center h-10 shrink-0 items-center rounded-lg">
-          <button className="text-sm font-['Inter'] font-semibold text-white w-8">
-            Save
-          </button>
+      <div className=" shadow-[0px_-4px_50px_0px_rgba(0,_0,_0,_0.09)] overflow-hidden bg-white flex flex-col justify-center w-full md:px-8 xs:px-6 md:py-5 xs:py-4 ">
+        <button className="bg-[#0073e6] flex flex-col justify-center md:p-4 xs:p-2 text-white items-center rounded-lg">
+          Save
         </button>
       </div>
     </div>

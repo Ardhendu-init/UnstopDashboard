@@ -52,9 +52,7 @@ const AssessmentInfo: React.FC<{ openDashboard: boolean }> = ({
       {assessmentInfo.map((info) => (
         <div
           key={info.id}
-          className={`flex ${
-            info.id === 4 ? "hidden xl:flex" : "" // Hide "Total Purpose" on screens below 1024px
-          } ${
+          className={`flex ${info.id === 4 ? "hidden xl:flex" : ""} ${
             info.id !== assessmentInfo.length &&
             "border-[#dadce0] xl:border-r xs:border-b xl:border-b-0"
           }`}
