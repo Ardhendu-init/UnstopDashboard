@@ -9,9 +9,9 @@ const AssessmentTab: React.FC = () => {
 
   return (
     <div className="bg-white w-full">
-      <div className="flex">
+      <div className="flex xs:justify-around md:justify-normal">
         <button
-          className={`px-4 font-medium ${
+          className={`px-4 xs:w-1/2 md:w-fit font-medium ${
             activeTab === 1
               ? "text-[#0073E6] font-normal border-b-2 border-[#0073E6]"
               : "bg-white text-[#1c4980]"
@@ -20,9 +20,9 @@ const AssessmentTab: React.FC = () => {
         >
           Assessment
         </button>
-        <div className="bg-[#DADCE0] w-[1px] mx-1 my-2" />
+        <div className="bg-[#DADCE0] w-[1px] mx-1 my-2 xs:hidden md:block" />
         <button
-          className={`py-4 px-4 font-medium ${
+          className={`py-4 px-4 xs:w-1/2 md:w-fit font-medium ${
             activeTab === 2
               ? "text-[#0073E6] font-normal border-b-2 border-[#0073E6]"
               : "text-[#1c4980]"

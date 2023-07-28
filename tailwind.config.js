@@ -16,7 +16,7 @@ module.exports = {
         textDefault: "#1C4980",
       },
       screens: {
-        xs: "375px",
+        xs: "150px",
         sm: "480px",
         md: "768px",
         lg: "1024px",

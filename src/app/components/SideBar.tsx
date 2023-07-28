@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-const sideBaricon = [
+export const sideBaricon = [
   {
     id: 1,
     location: "/dashboard.svg",
@@ -19,7 +19,7 @@ const sideBaricon = [
 ];
 const SideBar = () => {
   return (
-    <div className="overflow-hidden bg-white flex flex-col items-center  px-5 py-4 min-w-[100px]">
+    <div className="overflow-hidden bg-white flex flex-col items-center xs:hidden md:flex  px-5 py-4 min-w-[100px]">
       {sideBaricon.map((icon) => (
         <div
           className="overflow-hidden bg-white flex flex-col gap-2   items-center px-5 py-[10px] hover:bg-[#E5F1FC] rounded-lg  hover:border hover:border-[#0073E6] max-w-[105px] border-transparent cursor-pointer"
