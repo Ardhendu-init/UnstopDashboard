@@ -10,9 +10,12 @@ const AssessmentCard = ({
   users,
 }: AssessmentCardInfo) => {
   return (
+    // Container for the assessment card
     <div className="border-solid border-[#dadce0] overflow-hidden bg-white flex flex-col  gap-1 w-full  items-start p-4 border rounded-lg md:min-w-[400px] xs:min-w-[315px]">
+      {/* Assessment card header */}
       <div className="flex flex-row justify-between  w-full items-start mb-2">
         <div className="flex md:flex-col xs:flex-row gap-3">
+          {/* Assessment name and job section */}
           <Image src="/brief.svg" alt="Brief Logo " width={35} height={5} />
           <div>
             <p className="whitespace-nowrap md:text-lg xs:text-sm  font-medium  text-textDefault">
@@ -44,9 +47,11 @@ const AssessmentCard = ({
         />
       </div>
 
+      {/* Duration, Question, Share and User section */}
       <div className=" border-t-2 border-dashed  w-full xs:text-xs md:text-base">
         <div className="mt-5 flex flex-row justify-between items-center">
           <div className="flex md:gap-5 xs:gap-2 ">
+            {/* Duration and Question details */}
             <div className="flex flex-col ">
               <p className="font-medium">{duration}</p>
               <p className="font-medium">Duration</p>
@@ -57,6 +62,7 @@ const AssessmentCard = ({
             </div>
           </div>
           <div className="flex flex-row gap-2 items-center">
+            {/* Share button */}
             <div className="border-solid border-textDefault overflow-hidden bg-white flex flex-row gap-1  items-center md:px-2 xs:px-1 py-1 border rounded-[50px]">
               <Image src="/link.svg" alt="Link Logo" height={5} width={15} />
               <div className="md:text-sm xs:text-xs  font-medium  text-textDefault ">
@@ -64,6 +70,7 @@ const AssessmentCard = ({
               </div>
             </div>
             <div className="flex items-end gap-0 ">
+              {/* User avatar section */}
               {users.map((user) => {
                 const [firstName, lastName] = user.name.split(" ");
                 const initials = `${firstName.charAt(0)}${lastName.charAt(0)}`;

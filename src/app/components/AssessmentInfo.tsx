@@ -3,6 +3,8 @@ import Image from "next/image";
 import React from "react";
 
 const assessmentInfo: AssessmentData[] = [
+  // Sample data for assessment information
+  // Each object represents a section in the assessment information
   {
     id: 1,
     heading: "Total Assessment",
@@ -44,8 +46,9 @@ const AssessmentInfo: React.FC<{ openDashboard: boolean }> = ({
   openDashboard,
 }) => {
   return (
+    // Container for the assessment information
     <div
-      className={`border-[#dadce0] overflow-hidden flex xl:flex-row flex-col gap-4 border rounded-lg my-4 xs:${
+      className={`border-[#dadce0] overflow-hidden flex xl:flex-row flex-col xl:max-w-fit sm:w-full gap-4 border rounded-lg my-4 xs:${
         !openDashboard ? "hidden" : "flex"
       } sm:flex`}
     >
@@ -60,10 +63,12 @@ const AssessmentInfo: React.FC<{ openDashboard: boolean }> = ({
           <div
             className={`overflow-hidden w-full bg-white flex flex-col md:gap-4 xs:gap-2    justify-center md:py-5 md:px-5 xs:px-2 xs:py-2    `}
           >
+            {/* Assessment section heading */}
             <div className="text-sm font-semibold text-textDefault">
               {info.heading}
             </div>
 
+            {/* Data for each assignment in the assessment section */}
             <div className="flex flex-row md:gap-5 xs:gap-3 items-center">
               <Image
                 src={info.imgLocation}
@@ -100,10 +105,12 @@ const AssessmentInfo: React.FC<{ openDashboard: boolean }> = ({
               ))}
             </div>
           </div>
+          {/* Divider line for each section */}
           {info.id === 1 && (
             <div className="bg-[#DADCE0] w-[1px] mx-1 xl:hidden " />
           )}
 
+          {/* Extra section for the last item */}
           {info.id === 1 && (
             <div
               className={`overflow-hidden w-full bg-white flex flex-col md:gap-4 xs:gap-2 xl:hidden   justify-center md:py-5 md:px-5 xs:px-2 xs:py-2    `}

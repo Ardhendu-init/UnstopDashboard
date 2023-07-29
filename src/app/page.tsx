@@ -3,12 +3,13 @@ import Image from "next/image";
 import AssessmentTab from "./components/AssessmentTab";
 import AssessmentInfo from "./components/AssessmentInfo";
 import AssessmentCard from "./components/AssessmentCard";
-import { use, useState } from "react";
+import { useState } from "react";
 import Modal from "./modal/Modal";
 import { AssessmentCardInfo } from "@/types";
 import FormComponent from "@/app/components/FormComponent";
 import MobileMenu from "./components/MobileMenu";
 
+//Sample Assessment Data
 const assessmentCardInfo: AssessmentCardInfo[] = [
   {
     id: 1,
@@ -33,27 +34,34 @@ const assessmentCardInfo: AssessmentCardInfo[] = [
 ];
 
 const Home: React.FC = () => {
-  const [modalOpen, setModalOpen] = useState<boolean>(false);
-  const [openMobileMenu, SetOpenMobileMenu] = useState<boolean>(false);
-  const [dashboardOpen, setDashboardOpen] = useState<boolean>(false);
+  // State variables for managing various components' visibility
+  const [modalOpen, setModalOpen] = useState<boolean>(false); // Controls the modal visibility
+  const [openMobileMenu, setOpenMobileMenu] = useState<boolean>(false); // Controls the mobile menu visibility
+  const [dashboardOpen, setDashboardOpen] = useState<boolean>(false); // Controls the dashboard visibility
 
+  // Function to close the modal
   const handleCloseModal = () => {
     setModalOpen(false);
   };
+
+  // Function to toggle the mobile menu visibility
   const handleMobileMenu = () => {
-    SetOpenMobileMenu((prevOpenMobileMenu) => !prevOpenMobileMenu);
+    setOpenMobileMenu((prevOpenMobileMenu) => !prevOpenMobileMenu);
   };
 
+  // Function to open/close the modal
   const handleOpenModal = () => {
     setModalOpen((prevModalOpen) => !prevModalOpen);
   };
 
+  // Function to open/close the dashboard
   const handleDashboard = () => {
     setDashboardOpen((prevDashboardOpen) => !prevDashboardOpen);
   };
 
   return (
     <main className="bg-white pb-10 relative">
+      {/* Mobile menu toggle button (visible on small screens) */}
       <div className="flex justify-between md:hidden px-4 pt-4">
         <div className="flex items-center gap-2">
           <div className="bg-[#f2f8fe] w-8 h-8 flex justify-center rounded-[50%] cursor-pointer">
@@ -69,12 +77,15 @@ const Home: React.FC = () => {
         </div>
         <Image src="/laptop_mac.svg" alt="Laptop-logo" width={20} height={10} />
       </div>
+
+      {/* Mobile menu (visible on small screens) */}
       {openMobileMenu && (
         <div className="md:hidden">
           <MobileMenu openMenu={handleMobileMenu} isOpen={openMobileMenu} />
         </div>
       )}
 
+      {/* Header section with AssessmentTab */}
       <div className="flex justify-between border-b-2 ">
         <AssessmentTab />
         <Image
@@ -85,10 +96,16 @@ const Home: React.FC = () => {
           className="mr-5 xs:hidden md:block"
         />
       </div>
+
+      {/* Assessment Overview section */}
       <div className="my-5 mx-4 text-textDefault font-medium ">
         <p className="xs:hidden sm:block">Assessment Overview</p>
-        <AssessmentInfo openDashboard={dashboardOpen} />
+        <div className="flex justify-center">
+          <AssessmentInfo openDashboard={dashboardOpen} />
+        </div>
       </div>
+
+      {/* My Assessment section */}
       <div className="my-5 mx-4 text-textDefault font-medium ">
         <div className="flex items-center justify-between">
           <p>My Assessment</p>
@@ -111,7 +128,9 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className="flex gap-5 mt-5 flex-wrap justify-center">
+          {/* Add New Assessment card */}
           <div className="border-dashed border-[#dadce0] overflow-hidden bg-[#f6f8fa] flex flex-col gap-2 md:min-w-[400px] xs:max-w-[315px] items-center md:p-8 xs:p-3 border rounded-lg">
+            {/* Icon for adding new assessment */}
             <div
               className="overflow-hidden bg-white flex justify-center md:w-16 md:h-16 xs:w-8 xs:h-8 items-center rounded-[72px] cursor-pointer"
               onClick={handleOpenModal}
@@ -132,6 +151,8 @@ const Home: React.FC = () => {
               subjective (text or paragraph)!
             </p>
           </div>
+
+          {/* Render AssessmentCard components */}
           {assessmentCardInfo.map((item) => (
             <div key={item.id}>
               <AssessmentCard
@@ -145,6 +166,8 @@ const Home: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal for adding new assessment */}
       <Modal isOpen={modalOpen} onClose={handleCloseModal}>
         <FormComponent onClose={handleCloseModal} />
       </Modal>
