@@ -1,13 +1,14 @@
 "use client";
 import Image from "next/image";
 import AssessmentTab from "./components/AssessmentTab";
-import AssessmentInfo from "./components/AssessmentInfo";
+
 import AssessmentCard from "./components/AssessmentCard";
 import { useState } from "react";
 import Modal from "./modal/Modal";
 import { AssessmentCardInfo } from "@/types";
 import FormComponent from "@/app/components/FormComponent";
 import MobileMenu from "./components/MobileMenu";
+import DashboardInfo from "./components/DashboardInfo";
 
 //Sample Assessment Data
 const assessmentCardInfo: AssessmentCardInfo[] = [
@@ -64,7 +65,7 @@ const Home: React.FC = () => {
       {/* Mobile menu toggle button (visible on small screens) */}
       <div className="flex justify-between md:hidden px-4 pt-4">
         <div className="flex items-center gap-2">
-          <div className="bg-[#f2f8fe] w-8 h-8 flex justify-center rounded-[50%] cursor-pointer">
+          <div className="hover:bg-[#f2f8fe] w-8 h-8 flex justify-center rounded-[50%] cursor-pointer">
             <Image
               src="/segment.svg"
               alt="Segment-logo"
@@ -101,7 +102,7 @@ const Home: React.FC = () => {
       <div className="my-5 mx-4 text-textDefault font-medium ">
         <p className="xs:hidden sm:block">Assessment Overview</p>
         <div className="flex justify-center">
-          <AssessmentInfo openDashboard={dashboardOpen} />
+          <DashboardInfo openDashboard={dashboardOpen} />
         </div>
       </div>
 

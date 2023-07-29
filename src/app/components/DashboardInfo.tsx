@@ -42,7 +42,7 @@ const assessmentInfo: AssessmentData[] = [
   },
 ];
 
-const AssessmentInfo: React.FC<{ openDashboard: boolean }> = ({
+const DashboardInfo: React.FC<{ openDashboard: boolean }> = ({
   openDashboard,
 }) => {
   return (
@@ -159,4 +159,4 @@ const AssessmentInfo: React.FC<{ openDashboard: boolean }> = ({
   );
 };
 
-export default AssessmentInfo;
+export default DashboardInfo;
