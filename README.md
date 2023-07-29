@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Name
 
-## Getting Started
+Assessment Management System
 
-First, run the development server:
+## Introduction
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+The Assessment Management System is a web application designed to help educators and instructors manage assessments and tests efficiently. It provides a user-friendly interface for creating, organizing, and analyzing assessments, making the assessment process seamless and effective.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Create and manage assessments with various question types, such as multiple-choice questions and subjective questions.
+- View an overview of all assessments and their details, including date, duration, and number of questions.
+- Organize assessments with user-friendly tabs for easy navigation.
+- Mobile-responsive design for seamless access and usage on different devices.
+- A dashboard to visualize assessment-related data and statistics.
+- Support for adding skills and descriptions to assessments for better categorization and organization.
+- Real-time sharing of assessments with other users.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
 
-## Learn More
+- React: A popular JavaScript library for building user interfaces.
+- Next.js: A framework for building server-rendered React applications.
+- Tailwind CSS: A utility-first CSS framework for designing responsive and customizable UI components.
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run the project locally, follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository: `git clone https://github.com/your-username/assessment-management.git`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+After setting up the project locally, access the application in your web browser using the development server URL. You can then create and manage assessments, view statistics, and perform various other assessment-related tasks.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributing
+
+We welcome contributions to enhance the functionality and usability of the Assessment Management System. If you wish to contribute, please follow these steps:
+
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/your-feature`
+3. Make changes and commit: `git commit -m "Add your feature"`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Create a pull request
+
+## URL
+
+https://unstop-dashboard.netlify.app/
